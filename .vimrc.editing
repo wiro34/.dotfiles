@@ -1,0 +1,40 @@
+"----------------------------------------------------------------------------
+" 編集関係
+"----------------------------------------------------------------------------
+" insertモードを抜けるとIMEをオフ（ターミナルだと無意味）
+set noimdisable
+set iminsert=0 imsearch=0
+set noimcmdline
+inoremap <silent> <ESC> <ESC>:set iminsert=0<CR>
+
+" タブ文字数
+set tabstop=2
+set shiftwidth=2
+
+" タブを半角スペースに展開
+set expandtab
+
+" バックスペース
+set backspace=2
+
+" 日時の自動入力
+inoremap <expr> ,df strftime('%Y/%m/%d %H:%M:%S')
+inoremap <expr> ,dd strftime('%Y/%m/%d')
+inoremap <expr> ,dt strftime('%H:%M:%S')
+
+" 0, 9で行頭、行末へ
+nmap 1 0
+nmap 0 ^
+nmap 9 $
+
+"ビジュアルモード時vで行末まで選択
+vnoremap v $h
+
+" オートインデント
+set autoindent
+set smartindent
+set cindent
+
+" ペースト時にautoindentを無効にする
+set paste
+

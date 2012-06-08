@@ -1,0 +1,14 @@
+"----------------------------------------------------------------------------
+" 表示関係
+"----------------------------------------------------------------------------
+" 対応するカッコをハイライト
+set showmatch
+
+" 行番号表示
+"set number
+
+" 全角スペースの表示
+highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=darkgray
+match ZenkakuSpace /　/
+
+
