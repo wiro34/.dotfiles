@@ -4,3 +4,6 @@
 " シンタックスハイライト
 syntax enable
 
+" 検索結果をESC連打で消す
+nmap <Esc><Esc> :nohlsearch<CR><Esc>
+
