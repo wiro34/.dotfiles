@@ -11,4 +11,7 @@ set showmatch
 highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=darkgray
 match ZenkakuSpace /　/
 
+if exists('&ambiwidth')
+  set ambiwidth=double
+endif
 
