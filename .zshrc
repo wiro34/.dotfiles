@@ -4,8 +4,9 @@ if [ -f /etc/profile ]; then
 	source /etc/profile
 fi
 
-source ~/.zshenv
+#source ~/.zshenv
 source ~/.dotfiles/.zshrc.bindkey
+source ~/.dotfiles/.zshrc.alias
 
 # 補完機能を有効
 autoload -U compinit
