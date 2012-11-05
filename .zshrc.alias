@@ -2,5 +2,12 @@
 # エイリアス
 #
 
+# bundler
 alias b="bundle"
 alias be="bundle exec"
+
+# gitコマンドのエイリアス
+alias g=git
+
+# sudo
+alias sudo="sudo env PATH=$PATH"

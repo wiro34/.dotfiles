@@ -28,8 +28,3 @@ setopt hist_ignore_dups
 # ヒストリに追加されるコマンドが古いものと同じなら古い方を削除
 setopt hist_ignore_all_dups
 
-# gitコマンドのエイリアス
-alias g=git
-
-# sudo
-alias sudo="sudo env PATH=$PATH"
