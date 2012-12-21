@@ -2,12 +2,18 @@
 # エイリアス
 #
 
+# ls -la
+alias la="ls -la"
+
 # bundler
 alias b="bundle"
 alias be="bundle exec"
+alias bi="bundle install --path vendor/bundle"
+alias bu="bundle update"
 
-# gitコマンドのエイリアス
+# git
 alias g=git
+alias gst=git status
 
 # sudo
-alias sudo="sudo env PATH=$PATH"
+alias envsudo="sudo env PATH=$PATH"

@@ -11,13 +11,8 @@ export SHELL=`which zsh`
 export LANG=ja_JP.UTF-8
 
 #
-# Prompt
+# rbenv
 #
-autoload promptinit
-promptinit
-
-PROMPT="[%n %(3~,%1~,%~)]%(!.#.$) "
-PROMPT2="%_> "
-SPROMPT="%r is correct? [n,y,a,e]: "
-RPROMPT="[%~]"
-
+export RBENV_ROOT=/usr/local/lib/rbenv
+export PATH="$RBENV_ROOT/bin:$PATH"
+eval "$(rbenv init -)"

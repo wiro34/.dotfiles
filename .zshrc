@@ -12,6 +12,15 @@ source ~/.dotfiles/.zshrc.alias
 autoload -U compinit
 compinit
 
+# プロンプトの表示設定
+autoload promptinit
+promptinit
+PROMPT="[%n %(3~,%1~,%~)]%(!.#.$) "
+PROMPT2="%_> "
+SPROMPT="%r is correct? [n,y,a,e]: "
+RPROMPT="[%~]"
+
+
 # プロンプトのカラー表示を有効
 autoload -U colors
 colors
