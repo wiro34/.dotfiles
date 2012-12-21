@@ -5,3 +5,8 @@
 	pl = "pull --rebase"
 [http]
 	sslVerify = false
+[color]
+	diff = always
+	status = always
+	interactive = always
+	branch = always
