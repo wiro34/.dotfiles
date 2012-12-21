@@ -1,0 +1,10 @@
+[alias]
+	st = status
+	ci = commit
+	co = checkout
+	pl = "pull --rebase"
+[user]
+	name = "wiro34"
+	email = "too@wirog.net"
+[http]
+	sslVerify = false
