@@ -38,3 +38,8 @@ set cindent
 " ペースト時にautoindentを無効にする
 set paste
 
+" 行数とルーラ表示
+set number
+set ruler
+:highlight LineNr ctermfg=grey
+
