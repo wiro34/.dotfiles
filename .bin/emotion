@@ -1,0 +1,5 @@
+#/bin/sh
+
+geki_oko='٩(๑`^´๑)۶'
+
+echo $geki_oko
