@@ -1,29 +1,11 @@
 
+# SHELL
+export SHELL=`which zsh`
+
 # /etc/profile を読み込む
 if [ -f /etc/profile ]; then
 	source /etc/profile
 fi
-
-#source ~/.zshenv
-source ~/.dotfiles/.zshrc.bindkey
-source ~/.dotfiles/.zshrc.alias
-
-# 補完機能を有効
-autoload -U compinit
-compinit
-
-# プロンプトの表示設定
-autoload promptinit
-promptinit
-PROMPT="[%n %(3~,%1~,%~)]%(!.#.$) "
-PROMPT2="%_> "
-SPROMPT="%r is correct? [n,y,a,e]: "
-RPROMPT="[%~]"
-
-
-# プロンプトのカラー表示を有効
-autoload -U colors
-colors
 
 # cd で pushd する
 setopt auto_pushd
@@ -37,3 +19,47 @@ setopt hist_ignore_dups
 # ヒストリに追加されるコマンドが古いものと同じなら古い方を削除
 setopt hist_ignore_all_dups
 
+# z
+. `brew --prefix`/etc/profile.d/z.sh
+function precmd () {
+   z --add "$(pwd -P)"
+}
+
+#
+# PATHs
+#
+export PATH=$PATH:~/.bin/
+
+# rbenv
+export RBENV_ROOT=/usr/local/lib/rbenv
+export PATH="$RBENV_ROOT/bin:$PATH"
+eval "$(rbenv init -)"
+export PATH=$PATH:/usr/local/bin
+
+#
+# IMPORTs
+#
+source ~/.dotfiles/.zshrc.alias
+source ~/.dotfiles/.zshrc.bindkey
+source ~/.dotfiles/.zshrc.completion
+source ~/.dotfiles/.zshrc.prompt
+if [ -e ~/.dotfiles/.zshrc.secret ] ; then
+  source ~/.dotfiles/.zshrc.secret
+fi
+source ~/.dotfiles/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.dotfiles/.git-flow-completion.zsh
+
+# Attache tmux
+#if [ -z "$TMUX" -a -z "$STY" ]; then
+#    if type tmuxx >/dev/null 2>&1; then
+#        tmuxx
+#    elif type tmux >/dev/null 2>&1; then
+#        if tmux has-session && tmux list-sessions | /usr/bin/grep -qE '.*]$'; then
+#            tmux attach && echo "tmux attached session "
+#        else
+#            tmux new-session && echo "tmux created new session"
+#        fi
+#    elif type screen >/dev/null 2>&1; then
+#        screen -rx || screen -D -RR
+#    fi
+#fi

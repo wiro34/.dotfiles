@@ -1,19 +1,25 @@
-#
-# エイリアス
-#
-
 # ls -la
+alias ls="ls -G"
+alias ll="ls -l"
 alias la="ls -la"
 
 # bundler
 alias b="bundle"
 alias be="bundle exec"
+alias bet="RAILS_ENV=test bundle exec"
+alias bep="RAILS_ENV=product bundle exec"
 alias bi="bundle install --path vendor/bundle"
 alias bu="bundle update"
 
-# git
-alias g=git
-alias gst=git status
-
 # sudo
 alias envsudo="sudo env PATH=$PATH"
+
+# ssh
+alias pope2="ssh ep001638@172.16.201.2"
+
+# vim
+alias v="vim"
+
+# git
+alias g="git"
+alias gst="git status"

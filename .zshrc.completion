@@ -1,0 +1,10 @@
+# 補完機能を有効
+autoload -U compinit
+compinit
+zstyle ':completion:*:default' menu select=2
+#zstyle ':completion:*' group-name ''
+#zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z} r:|[._-]=*'
+
+# ファイル補完候補に色を付ける
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+
