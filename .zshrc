@@ -46,6 +46,9 @@ source ~/.dotfiles/.zshrc.prompt
 if [ -e ~/.dotfiles/.zshrc.secret ] ; then
   source ~/.dotfiles/.zshrc.secret
 fi
+if [ -e ~/.dotfiles/.zshrc.platform ] ; then
+  source ~/.dotfiles/.zshrc.platform
+fi
 source ~/.dotfiles/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.dotfiles/.git-flow-completion.zsh
 
