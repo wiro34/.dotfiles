@@ -1,0 +1,5 @@
+" VimFiler
+Bundle 'Shougo/vimfiler'
+Bundle 'Shougo/unite.vim'
+Bundle 'Shougo/vimproc'
+

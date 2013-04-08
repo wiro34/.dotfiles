@@ -1,2 +1,4 @@
 
+" 全角文字をきちんとした幅で表示
+set ambiwidth=double
 
