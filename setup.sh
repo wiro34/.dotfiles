@@ -6,6 +6,7 @@ FILES=(
   .zshenv
   .vimrc
   .gitconfig
+  .tmux.conf
 )
 
 DIR=$HOME/.dotfiles
