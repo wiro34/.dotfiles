@@ -14,9 +14,6 @@ alias bu="bundle update"
 # sudo
 alias envsudo="sudo env PATH=$PATH"
 
-# ssh
-alias pope2="ssh ep001638@172.16.201.2"
-
 # vim
 alias v="vim"
 
