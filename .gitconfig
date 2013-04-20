@@ -4,8 +4,8 @@
 	co = checkout
 	pl = "pull --rebase"
 [user]
-	name = Toru.Inoue
-	email = Toru.Inoue@so-net.co.jp
+	name = wiro34
+	email = "too@wirog.net"
 [http]
 	sslVerify = false
 [color]
