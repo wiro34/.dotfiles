@@ -1,0 +1,17 @@
+" copy from http://qiita.com/items/1c32d3f24cc2919203eb
+
+set nocompatible               " be iMproved
+filetype off
+
+if has('vim_starting')
+  set runtimepath+=~/.dotfiles/.vim/bundle/neobundle.vim
+  call neobundle#rc(expand('~/.dotfiles/.vim/bundle/'))
+endif
+
+filetype plugin indent on     " required!
+filetype indent on
+syntax on
+
+" vi上から、:NeoBundleInstallで.vimrcのNeoBundleで指定されているリポジトリのプラグインをインストールできる。
+" プラグインを削除したい場合は、vimrc上からNeoBundleの記述を消して:NeoBundleCleanでできる。
+

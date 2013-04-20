@@ -1,5 +1,114 @@
-" VimFiler
-Bundle 'Shougo/vimfiler'
-Bundle 'Shougo/unite.vim'
-Bundle 'Shougo/vimproc'
+NeoBundle 'Shougo/neobundle.vim'
+NeoBundle 'Shougo/vimfiler'
+NeoBundle 'Shougo/vimshell'
 
+NeoBundle 'jpalardy/vim-slime'
+
+" NeoBundle 'scrooloose/syntastic'
+""NeoBundle 'https://bitbucket.org/kovisoft/slimv'
+
+" copy from http://qiita.com/items/ab2ad83ddbaf2f6ce7fb
+
+" neobundle"{{{
+" コマンドを伴うやつの遅延読み込み
+"bundle"{{{
+" その他 {{{
+NeoBundle 'Shougo/vimproc', {
+      \ 'build' : {
+      \     'mac' : 'make -f make_mac.mak',
+      \     'unix' : 'make -f make_unix.mak',
+      \    },
+      \ }
+NeoBundleLazy 'taichouchou2/vim-endwise.git', {
+      \ 'autoload' : {
+      \   'insert' : 1,
+      \ } }
+" }}}
+
+" 補完 {{{
+NeoBundleLazy 'Shougo/neocomplcache', {
+      \ 'autoload' : {
+      \   'insert' : 1,
+      \ }}
+NeoBundleLazy 'Shougo/neosnippet', {
+      \ 'autoload' : {
+      \   'insert' : 1,
+      \ }}
+
+NeoBundle 'Shougo/neocomplcache-rsense', {
+      \ 'depends': 'Shougo/neocomplcache',
+      \ 'autoload': { 'filetypes': 'ruby' }}
+NeoBundleLazy 'taichouchou2/rsense-0.3', {
+      \ 'build' : {
+      \    'mac': 'ruby etc/config.rb > ~/.rsense',
+      \    'unix': 'ruby etc/config.rb > ~/.rsense',
+      \ } }
+" }}}
+
+" 便利 {{{
+" 範囲指定のコマンドが使えないので、tcommentのLazy化はNeoBundleのアップデートを待ちましょう...
+NeoBundle 'tomtom/tcomment_vim'
+NeoBundleLazy 'tpope/vim-surround', {
+      \ 'autoload' : {
+      \   'mappings' : [
+      \     ['nx', '<Plug>Dsurround'], ['nx', '<Plug>Csurround'],
+      \     ['nx', '<Plug>Ysurround'], ['nx', '<Plug>YSurround'],
+      \     ['nx', '<Plug>Yssurround'], ['nx', '<Plug>YSsurround'],
+      \     ['nx', '<Plug>YSsurround'], ['vx', '<Plug>VgSurround'],
+      \     ['vx', '<Plug>VSurround']
+      \ ]}}
+" }}}
+
+" ruby / railsサポート {{{
+NeoBundle 'tpope/vim-rails'
+NeoBundleLazy 'ujihisa/unite-rake', {
+      \ 'depends' : 'Shougo/unite.vim' }
+NeoBundleLazy 'basyura/unite-rails', {
+      \ 'depends' : 'Shjkougo/unite.vim' }
+NeoBundleLazy 'taichouchou2/unite-rails_best_practices', {
+      \ 'depends' : 'Shougo/unite.vim',
+      \ 'build' : {
+      \    'mac': 'gem install rails_best_practices',
+      \    'unix': 'gem install rails_best_practices',
+      \   }
+      \ }
+NeoBundleLazy 'taichouchou2/unite-reek', {
+      \ 'build' : {
+      \    'mac': 'gem install reek',
+      \    'unix': 'gem install reek',
+      \ },
+      \ 'autoload': { 'filetypes': ['ruby', 'eruby', 'haml'] },
+      \ 'depends' : 'Shougo/unite.vim' }
+NeoBundleLazy 'taichouchou2/alpaca_complete', {
+      \ 'depends' : 'tpope/vim-rails',
+      \ 'build' : {
+      \    'mac':  'gem install alpaca_complete',
+      \    'unix': 'gem install alpaca_complete',
+      \   }
+      \ }
+
+let s:bundle_rails = 'unite-rails unite-rails_best_practices unite-rake alpaca_complete'
+
+function! s:bundleLoadDepends(bundle_names) "{{{
+  " bundleの読み込み
+  execute 'NeoBundleSource '.a:bundle_names
+  au! RailsLazyPlugins
+endfunction"}}}
+aug RailsLazyPlugins
+  au User Rails call <SID>bundleLoadDepends(s:bundle_rails)
+aug END
+
+" reference環境
+NeoBundleLazy 'vim-ruby/vim-ruby', {
+    \ 'autoload' : { 'filetypes': ['ruby', 'eruby', 'haml'] } }
+NeoBundleLazy 'taka84u9/vim-ref-ri', {
+      \ 'depends': ['Shougo/unite.vim', 'thinca/vim-ref'],
+      \ 'autoload': { 'filetypes': ['ruby', 'eruby', 'haml'] } }
+NeoBundleLazy 'skwp/vim-rspec', {
+      \ 'autoload': { 'filetypes': ['ruby', 'eruby', 'haml'] } }
+NeoBundleLazy 'ruby-matchit', {
+    \ 'autoload' : { 'filetypes': ['ruby', 'eruby', 'haml'] } }
+" }}}
+
+" }}}
+"}}}
