@@ -30,13 +30,36 @@ nmap 9 $
 "ビジュアルモード時vで行末まで選択
 vnoremap v $h
 
+" カーソルキーで移動しないようにする
+" imap OA <ESC>ki
+" imap OB <ESC>ji
+" imap OC <ESC>li
+" imap OD <ESC>hi
+inoremap OA <Nop>
+inoremap OB <Nop>
+inoremap OC <Nop>
+inoremap OD <Nop>
+
+" インサートモードでもカーソル移動する
+inoremap <C-k> <Up>
+inoremap <C-j> <Down>
+inoremap <C-l> <Right>
+inoremap <C-h> <Left>
+imap <C-e> <Home>
+imap <C-g> <End>
+
+" jj kk でインサートモードを抜ける
+inoremap jj <ESC>
+inoremap kk <ESC>
+
 " オートインデント
 set autoindent
 set smartindent
 set cindent
 
 " ペースト時にautoindentを無効にする
-set paste
+" set paste
+set pastetoggle=<F2>
 
 " 行数とルーラ表示
 set number
