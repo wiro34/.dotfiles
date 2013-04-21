@@ -20,10 +20,10 @@ setopt hist_ignore_dups
 setopt hist_ignore_all_dups
 
 # z
-. `brew --prefix`/etc/profile.d/z.sh
-function precmd () {
-   z --add "$(pwd -P)"
-}
+#. `brew --prefix`/etc/profile.d/z.sh
+#function precmd () {
+#   z --add "$(pwd -P)"
+#}
 
 #
 # PATHs
