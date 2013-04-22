@@ -12,7 +12,7 @@ alias bi="bundle install --path vendor/bundle"
 alias bu="bundle update"
 
 # guard
-alias killguard="ps | grep 'guard$' | cut -d' ' -f1 | xargs kill -9"
+alias killguard="ps | grep -e 'ruby /.*/bin/guard$' | cut -d' ' -f1 | xargs kill -9"
 
 # sudo
 alias envsudo="sudo env PATH=$PATH"
@@ -23,3 +23,15 @@ alias v="vim"
 # git
 alias g="git"
 alias gst="git status"
+
+# show git-branch
+function m-git-branch() {
+  git branch --no-color | sed -e '/^[^*]/d' -e 's/* //'
+}
+
+# show
+function m-git-modified() {
+  git status --porcelain | sed -e '/^[^M]/d' | wc
+}
+
+

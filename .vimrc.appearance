@@ -4,8 +4,16 @@
 " 対応するカッコをハイライト
 set showmatch
 
-" 行番号表示
-"set number
+" 行数とルーラ表示
+set number
+set ruler
+:highlight LineNr ctermfg=grey
+
+" カーソル行をハイライト
+set cursorline
+
+" ステータスラインを常時表示
+set laststatus=2
 
 " 全角スペースの表示
 highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=darkgray
@@ -14,4 +22,13 @@ match ZenkakuSpace /　/
 if exists('&ambiwidth')
   set ambiwidth=double
 endif
+
+" スクロール時の視界
+set scrolloff=8
+set sidescrolloff=16
+set sidescroll=1
+
+" マウス ON
+set mouse=a
+
 
