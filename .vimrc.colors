@@ -7,3 +7,5 @@ syntax enable
 " 検索結果をESC連打で消す
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
 
+" 行番号の色
+highlight LineNr ctermfg=0 guifg=bg
