@@ -2,6 +2,8 @@
 # SHELL
 export SHELL=`which zsh`
 
+export GIT_EDITOR=`which vim`
+
 # /etc/profile を読み込む
 if [ -f /etc/profile ]; then
 	source /etc/profile
