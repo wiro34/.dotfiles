@@ -6,7 +6,9 @@ source ~/.dotfiles/.vimrc.completion
 source ~/.dotfiles/.vimrc.editing
 source ~/.dotfiles/.vimrc.encoding
 
-if isdirectory(expand('~/.dotfiles/.vim/bundle/neobundle.vim'))
+if filereadable(expand('~/.dotfiles/.vim/bundle/neobundle.vim/README.md'))
+  " git submodule init
+  " git submodule update
   source ~/.dotfiles/.vimrc.neobundle
   source ~/.dotfiles/.vimrc.bundle
 endif
