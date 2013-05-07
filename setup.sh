@@ -2,6 +2,7 @@
 
 FILES=(
   .bashrc
+  .bash_profile
   .zshrc
   .zshenv
   .vimrc
