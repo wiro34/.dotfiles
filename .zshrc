@@ -30,7 +30,7 @@ setopt hist_ignore_all_dups
 #
 # PATHs
 #
-export PATH=$PATH:~/.bin/
+export PATH=$PATH:~/.bin/:~/.dotfiles/.bin
 
 # rbenv
 export RBENV_ROOT=/usr/local/lib/rbenv
