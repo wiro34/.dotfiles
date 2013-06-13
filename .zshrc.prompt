@@ -1,10 +1,21 @@
+
+# ブランチ名の取得
+autoload -Uz vcs_info
+zstyle ':vcs_info:*' formats '[%b]'
+zstyle ':vcs_info:*' actionformats '[%b|%a]'
+precmd () {
+  psvar=()
+  LANG=en_US.UTF-8 vcs_info
+  [[ -n "$vcs_info_msg_0_" ]] && psvar[1]="$vcs_info_msg_0_"
+}
+
 # プロンプトの表示設定
 autoload promptinit
 promptinit
 PROMPT="[%n %(3~,%1~,%~)]%(!.#.$) "
 PROMPT2="%_> "
 SPROMPT="%r is correct? [n,y,a,e]: "
-RPROMPT="[%~]"
+RPROMPT="%1(v|%F{green}%1v%f|) [%~]"
 
 # プロンプトのカラー表示を有効
 autoload -U colors
