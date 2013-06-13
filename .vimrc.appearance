@@ -29,6 +29,6 @@ set sidescrolloff=16
 set sidescroll=1
 
 " マウス ON
-set mouse=a
+"set mouse=a
 
 
