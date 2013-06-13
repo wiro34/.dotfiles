@@ -31,6 +31,7 @@ setopt hist_ignore_all_dups
 # PATHs
 #
 export PATH=$PATH:~/.bin/:~/.dotfiles/.bin
+export PATH=$PATH:/usr/local/lib/scala/bin:/usr/local/lib/sbt/bin
 
 # rbenv
 export RBENV_ROOT=/usr/local/lib/rbenv
