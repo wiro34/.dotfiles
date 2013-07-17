@@ -5,6 +5,7 @@ source ~/.dotfiles/.vimrc.colors
 source ~/.dotfiles/.vimrc.completion
 source ~/.dotfiles/.vimrc.editing
 source ~/.dotfiles/.vimrc.encoding
+source ~/.dotfiles/.vimrc.tabs
 
 if filereadable(expand('~/.dotfiles/.vim/bundle/neobundle.vim/README.md'))
   " git submodule init

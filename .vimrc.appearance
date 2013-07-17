@@ -5,7 +5,7 @@
 set showmatch
 
 " 行数とルーラ表示
-set number
+"set number
 set ruler
 :highlight LineNr ctermfg=grey
 
