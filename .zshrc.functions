@@ -1,0 +1,20 @@
+# show git-branch
+function m-git-branch() {
+  git branch --no-color | sed -e '/^[^*]/d' -e 's/* //'
+}
+
+# show
+function m-git-modified() {
+  git status --porcelain | sed -e '/^[^M]/d' | wc
+}
+
+# open browser
+wiki () {
+  open "http://ja.wikipedia.org/wiki/$1"
+}
+alc () {
+  open "http://eow.alc.co.jp/search?q=$1"
+}
+gg () {
+  open "https://www.google.co.jp/search?q=$*"
+}
