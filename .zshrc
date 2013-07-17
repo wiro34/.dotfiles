@@ -39,12 +39,17 @@ export PATH="$RBENV_ROOT/bin:$PATH"
 eval "$(rbenv init -)"
 export PATH=$PATH:/usr/local/bin
 
+# Postgresql
+export PGDATA=/usr/local/var/postgres
+
 #
 # IMPORTs
 #
 source ~/.dotfiles/.zshrc.alias
 source ~/.dotfiles/.zshrc.bindkey
+source ~/.dotfiles/.zshrc.cdr
 source ~/.dotfiles/.zshrc.completion
+source ~/.dotfiles/.zshrc.functions
 source ~/.dotfiles/.zshrc.prompt
 if [ -e ~/.dotfiles/.zshrc.secret ] ; then
   source ~/.dotfiles/.zshrc.secret

@@ -7,7 +7,7 @@ alias la="ls -la"
 alias b="bundle"
 alias be="bundle exec"
 alias bet="RAILS_ENV=test bundle exec"
-alias bep="RAILS_ENV=product bundle exec"
+alias bep="RAILS_ENV=production bundle exec"
 alias bi="bundle install --path vendor/bundle"
 alias bu="bundle update"
 
@@ -23,16 +23,6 @@ alias v="vim"
 # git
 alias g="git"
 alias gst="git status"
-
-# show git-branch
-function m-git-branch() {
-  git branch --no-color | sed -e '/^[^*]/d' -e 's/* //'
-}
-
-# show
-function m-git-modified() {
-  git status --porcelain | sed -e '/^[^M]/d' | wc
-}
 
 # suffix aliases
 alias -s rb=ruby
