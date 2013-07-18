@@ -1,0 +1,13 @@
+
+# 保存ファイル
+HISTFILE=$HOME/.zsh-history
+
+# メモリに展開する履歴数
+#HISTSIZE=1000
+
+# 保存する履歴数
+SAVEHIST=1000
+
+setopt extended_history
+setopt share_history
+

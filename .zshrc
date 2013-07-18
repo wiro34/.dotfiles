@@ -50,6 +50,7 @@ source ~/.dotfiles/.zshrc.bindkey
 source ~/.dotfiles/.zshrc.cdr
 source ~/.dotfiles/.zshrc.completion
 source ~/.dotfiles/.zshrc.functions
+source ~/.dotfiles/.zshrc.history
 source ~/.dotfiles/.zshrc.prompt
 if [ -e ~/.dotfiles/.zshrc.secret ] ; then
   source ~/.dotfiles/.zshrc.secret
