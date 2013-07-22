@@ -16,6 +16,9 @@ set-window-option -g utf8 on
 # sharing clipboard
 set -g default-command "reattach-to-user-namespace -l zsh"
 
+# history
+set -g history-limit 10000
+
 #-------------------------------
 # View
 #-------------------------------
@@ -89,6 +92,8 @@ bind -r k resize-pane -U 6
 #bind -r j select-pane -D
 #bind -r k select-pane -U
 #bind -r l select-pane -R
+bind -r n next-window
+bind -r p previous-window
 
 # Pane exit
 bind q kill-pane
