@@ -24,6 +24,11 @@ alias v="vim"
 alias g="git"
 alias gst="git status"
 
+# LF
+LF=$(printf '\\\012_')
+LF=${LF%_}
+alias replf='sed '"'"'s/\\n/'"$LF"'/g'"'"''
+
 # suffix aliases
 alias -s rb=ruby
 
