@@ -8,4 +8,4 @@ syntax enable
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
 
 " 行番号の色
-highlight LineNr ctermfg=0 guifg=bg
+highlight LineNr ctermfg=0 guifg=white    ctermfg=green cterm=none
