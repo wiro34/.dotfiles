@@ -1,6 +1,7 @@
 #/bin/sh
 
 geki_oko='٩(๑`^´๑)۶'
-gachi_shobo='٩( ◞‸◟ )۶'
+gachi_shobo='( ◞‸◟ )'
+happy='(๑°⌓°๑)'
 
 echo $geki_oko
