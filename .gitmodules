@@ -4,3 +4,6 @@
 [submodule "tmux-powerline"]
 	path = tmux-powerline
 	url = https://github.com/jedipunkz/tmux-powerline.git
+[submodule "zsh-completions"]
+	path = zsh-completions
+	url = https://github.com/zsh-users/zsh-completions.git
