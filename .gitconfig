@@ -11,4 +11,4 @@
 	interactive = always
 	branch = always
 [push]
-	default = simple
+	default = upstream

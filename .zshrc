@@ -48,10 +48,10 @@ export PGDATA=/usr/local/var/postgres
 source ~/.dotfiles/.zshrc.alias
 source ~/.dotfiles/.zshrc.bindkey
 source ~/.dotfiles/.zshrc.cdr
-source ~/.dotfiles/.zshrc.completion
 source ~/.dotfiles/.zshrc.functions
 source ~/.dotfiles/.zshrc.history
 source ~/.dotfiles/.zshrc.prompt
+source ~/.dotfiles/.zshrc.completion
 if [ -e ~/.dotfiles/.zshrc.secret ] ; then
   source ~/.dotfiles/.zshrc.secret
 fi
