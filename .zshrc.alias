@@ -1,6 +1,6 @@
 # ls -la
 alias ls="ls -G"
-alias ll="ls -l"
+alias ll="ls -ltr"
 alias la="ls -la"
 
 # bundler
