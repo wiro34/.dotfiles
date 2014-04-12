@@ -34,7 +34,7 @@ export PATH=$PATH:~/.bin/:~/.dotfiles/.bin
 export PATH=$PATH:/usr/local/lib/scala/bin:/usr/local/lib/sbt/bin
 
 # rbenv
-export RBENV_ROOT=/usr/local/lib/rbenv
+export RBENV_ROOT=/usr/local/rbenv
 export PATH="$RBENV_ROOT/bin:$PATH"
 eval "$(rbenv init -)"
 export PATH=$PATH:/usr/local/bin
