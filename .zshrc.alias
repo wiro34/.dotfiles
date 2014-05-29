@@ -8,7 +8,7 @@ alias b="bundle"
 alias be="bundle exec"
 alias bet="RAILS_ENV=test bundle exec"
 alias bep="RAILS_ENV=production bundle exec"
-alias bi="bundle install --path vendor/bundle"
+alias bi="bundle install --path vendor/bundle -j 4"
 alias bu="bundle update"
 
 # guard

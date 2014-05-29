@@ -34,7 +34,7 @@ export PATH=$PATH:~/.bin/:~/.dotfiles/.bin
 export PATH=$PATH:/usr/local/lib/scala/bin:/usr/local/lib/sbt/bin
 
 # rbenv
-export RBENV_ROOT=/usr/local/lib/rbenv
+export RBENV_ROOT=/usr/local/rbenv
 export PATH="$RBENV_ROOT/bin:$PATH"
 eval "$(rbenv init -)"
 export PATH=$PATH:/usr/local/bin
@@ -50,6 +50,8 @@ source ~/.dotfiles/.zshrc.bindkey
 source ~/.dotfiles/.zshrc.cdr
 source ~/.dotfiles/.zshrc.functions
 source ~/.dotfiles/.zshrc.history
+source ~/.dotfiles/.zshrc.nvm
+source ~/.dotfiles/.zshrc.percol
 source ~/.dotfiles/.zshrc.prompt
 source ~/.dotfiles/.zshrc.completion
 if [ -e ~/.dotfiles/.zshrc.secret ] ; then
@@ -78,3 +80,4 @@ fi
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
