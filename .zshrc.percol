@@ -1,0 +1,7 @@
+# load percol scripts
+for f (~/.dotfiles/percol-sources/*) source "${f}"
+
+# binding keys
+bindkey '^R' percol-select-history
+
+
