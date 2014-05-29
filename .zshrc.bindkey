@@ -1,8 +1,10 @@
 # Home
 bindkey  "[1~"    beginning-of-line
+bindkey  "^A"     beginning-of-line
 
 # End
 bindkey  "[4~"     end-of-line
+bindkey  "^D"      end-of-line
 
 # Delete
 bindkey  "[3~"  delete-char
