@@ -21,43 +21,15 @@ setopt hist_ignore_dups
 # ヒストリに追加されるコマンドが古いものと同じなら古い方を削除
 setopt hist_ignore_all_dups
 
-# z
-#. `brew --prefix`/etc/profile.d/z.sh
-#function precmd () {
-#   z --add "$(pwd -P)"
-#}
-
 #
 # PATHs
 #
 export PATH=$PATH:~/.bin/:~/.dotfiles/.bin
-export PATH=$PATH:/usr/local/lib/scala/bin:/usr/local/lib/sbt/bin
-
-# rbenv
-export RBENV_ROOT=/usr/local/rbenv
-export PATH="$RBENV_ROOT/bin:$PATH"
-eval "$(rbenv init -)"
-export PATH=$PATH:/usr/local/bin
-
-# Postgresql
-export PGDATA=/usr/local/var/postgres
 
 #
 # IMPORTs
 #
-source ~/.dotfiles/.zshrc.alias
-source ~/.dotfiles/.zshrc.bindkey
-source ~/.dotfiles/.zshrc.cdr
-source ~/.dotfiles/.zshrc.functions
-source ~/.dotfiles/.zshrc.history
-source ~/.dotfiles/.zshrc.prompt
-source ~/.dotfiles/.zshrc.completion
-if [ -e ~/.dotfiles/.zshrc.secret ] ; then
-  source ~/.dotfiles/.zshrc.secret
-fi
-if [ -e ~/.dotfiles/.zshrc.platform ] ; then
-  source ~/.dotfiles/.zshrc.platform
-fi
+for f (~/.dotfiles/.zshrc.*) source "${f}"
 source ~/.dotfiles/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.dotfiles/.git-flow-completion.zsh
 
@@ -75,6 +47,3 @@ if [ -z "$TMUX" -a -z "$STY" ]; then
         screen -rx || screen -D -RR
     fi
 fi
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"

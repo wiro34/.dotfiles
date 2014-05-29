@@ -10,8 +10,3 @@ fi
 PATH=$PATH:$HOME/bin
 PATH=$PATH:/sbin:/usr/sbin
 export PATH
-
-# ログイン時にzshを起動
-if [ -x `which zsh` ] ; then
-  exec zsh
-fi

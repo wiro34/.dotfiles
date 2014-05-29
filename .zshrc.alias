@@ -10,9 +10,10 @@ alias bet="RAILS_ENV=test bundle exec"
 alias bep="RAILS_ENV=production bundle exec"
 alias bi="bundle install --path vendor/bundle"
 alias bu="bundle update"
+alias bc="bundle clean"
 
 # guard
-alias killguard="ps | grep -e 'ruby /.*/bin/guard$' | cut -d' ' -f1 | xargs kill -9"
+alias killguard="ps -ax | grep -e 'ruby /.*/bin/guard$' | cut -d' ' -f1 | xargs kill -9"
 
 # sudo
 alias envsudo="sudo env PATH=$PATH"
