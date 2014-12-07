@@ -2,10 +2,9 @@
 	st = status
 	ci = commit
 	co = checkout
-	pl = "pull --rebase"
 [user]
-	name = wiro34
-	email = "too@wirog.net"
+	name = Toru.Inoue
+	email = Toru.Inoue@so-net.co.jp
 [http]
 	sslVerify = false
 [color]

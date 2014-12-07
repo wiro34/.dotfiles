@@ -22,11 +22,3 @@ for FILE in ${FILES[@]} ; do
   fi
   ln -s $DIR/$FILE $HOME/$FILE
 done
-
-#if [ -e ~/.bashrc ] ; then
-#
-#ln -s ~/.dotfiles/.bashrc    ~/.bashrc
-#ln -s ~/.dotfiles/.zshrc     ~/.zshrc
-#ln -s ~/.dotfiles/.zshenv    ~/.zshenv
-#ln -s ~/.dotfiles/.vimrc     ~/.vimrc
-#ln -s ~/.dotfiles/.gitconfig ~/.gitconfig

@@ -1,5 +1,5 @@
 # ls -la
-alias ls="ls -G"
+alias ls="ls --color=auto"
 alias ll="ls -ltr"
 alias la="ls -la"
 
@@ -8,7 +8,7 @@ alias b="bundle"
 alias be="bundle exec"
 alias bet="RAILS_ENV=test bundle exec"
 alias bep="RAILS_ENV=production bundle exec"
-alias bi="bundle install --path vendor/bundle -j 4"
+alias bi="bundle install --path vendor/bundle"
 alias bu="bundle update"
 alias bc="bundle clean"
 
@@ -28,7 +28,7 @@ alias gst="git status"
 # LF
 LF=$(printf '\\\012_')
 LF=${LF%_}
-alias replf='sed '"'"'s/\\n/'"$LF"'/g'"'"''
+alias replf='perl -pe '"'"'s/\\n/\n/g'"'"
 
 # suffix aliases
 alias -s rb=ruby
