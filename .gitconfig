@@ -2,7 +2,6 @@
 	st = status
 	ci = commit
 	co = checkout
-	pl = "pull --rebase"
 [http]
 	sslVerify = false
 [color]

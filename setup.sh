@@ -1,5 +1,19 @@
 #!/bin/sh
 
+PLATFORM="$1"
+if [ -z "$1" ]; then
+  if [ `uname` = "Darwin" ]; then
+    PLATFORM="osx"
+  elif [ `uname` = "Linux" ]; then
+    PLATFORM="linux"
+  else
+    echo "Unknown platform"
+  fi
+fi
+echo "Setting up for $PLATFORM"
+
+git checkout platform/$PLATFORM > /dev/null
+
 FILES=(
   .bashrc
   .bash_profile
@@ -13,20 +27,9 @@ FILES=(
 DIR=$HOME/.dotfiles
 
 for FILE in ${FILES[@]} ; do
-  if [ -e $HOME/$FILE ] ; then
-    if [ ! -ef $HOME/$FILE.bak  ] ; then
-      mv $HOME/$FILE $HOME/$FILE.bak
-    else
-      rm $HOME/$FILE
-    fi
+  if [ -f $HOME/$FILE ] ; then
+    echo "File is already existed. Please rerun after remove file: $HOME/$FILE"
+  else
+    ln -s $DIR/$FILE $HOME/$FILE
   fi
-  ln -s $DIR/$FILE $HOME/$FILE
 done
-
-#if [ -e ~/.bashrc ] ; then
-#
-#ln -s ~/.dotfiles/.bashrc    ~/.bashrc
-#ln -s ~/.dotfiles/.zshrc     ~/.zshrc
-#ln -s ~/.dotfiles/.zshenv    ~/.zshenv
-#ln -s ~/.dotfiles/.vimrc     ~/.vimrc
-#ln -s ~/.dotfiles/.gitconfig ~/.gitconfig

@@ -18,3 +18,12 @@ alc () {
 gg () {
   open "https://www.google.co.jp/search?q=$*"
 }
+
+# 256 カラーを表示する関数
+function 256colortest() {
+    local code
+    for code in {0..255}; do
+        echo -e "\e[38;05;${code}m $code: Test"
+    done
+}
+
