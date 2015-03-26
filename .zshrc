@@ -27,6 +27,11 @@ setopt hist_ignore_all_dups
 export PATH=$PATH:~/.bin/:~/.dotfiles/.bin
 
 #
+# Python
+#
+alias python=python2.7
+
+#
 # IMPORTs
 #
 for f (~/.dotfiles/.zshrc.*) source "${f}"

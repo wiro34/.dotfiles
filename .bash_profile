@@ -6,6 +6,7 @@ if [ -f ~/.bashrc ]; then
 fi
 
 # User specific environment and startup programs
+export DISPLAY=:1
 
 PATH=$PATH:$HOME/bin
 PATH=$PATH:/sbin:/usr/sbin

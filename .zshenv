@@ -11,3 +11,6 @@ LF=${LF%_}
 # EDITOR
 #
 export EDITOR=vim
+
+export DISPLAY=:1
+

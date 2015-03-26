@@ -8,35 +8,28 @@ set -g mouse-select-window on
 set -g mode-mouse on
 
 # Loading .tmux.conf
-#bind r source-file ~/.tmux.conf; display-message "Reload Tmux Config"
+bind r source-file ~/.tmux.conf \; display-message "Reload Tmux Config"
 
 # utf8 enabled
 set-window-option -g utf8 on
-set -g status-utf8 on
-set -g utf8 on
-
-# sharing clipboard
-##set -g default-command "reattach-to-user-namespace -l zsh"
 
 # history
 set -g history-limit 10000
 
-##-------------------------------
-## View
-##-------------------------------
+#-------------------------------
+# View
+#-------------------------------
 set -g status-interval 5
 set -g status-left-length 100
 set -g status-right-length 90
 
 # status line
-#set -g status-bg colour234
 set -g status-bg colour234
-set -g status-fg colour220
+set -g status-fg colour230
 #set -g status-bg black
 set -g status-attr dim
-#set -g status-left '#[fg=colour223,bg=colour202,bold] #(emotion) #[fg=colour252,bg=colour239,bold] #20(hostname -s)#[deafult] #(whoami) #[fg=colour238,bg=colour234,nobold]'
-set -g status-left '#[fg=colour223,bg=blue,bold] #[deafult] #[fg=blue,bg=green,nobold]'
-set -g status-right '#[default] < #[fg=colour34]Mem #(used-mem)%%#[default] < #[fg=colour124,bold]%y/%m/%d (%a) %H:%M#[default] '
+set -g status-left '#[fg=colour223,bg=colour202,bold] #(emotion) #[fg=colour252,bg=colour239,bold] #20(hostname -s)#[deafult] #(whoami) #[fg=colour238,bg=colour234,nobold]'
+set -g status-right '< #[fg=colour64,bold]#(echo $LANG)#[default] < #[fg=colour69]Mem #(used-mem)%%#[default] < #[fg=red,bold]%y/%m/%d (%a) %H:%M#[default] '
 #set -g status-left '#[fg=green,bold][#20(whoami)]#[default]'
 #set -g status-left '#[fg=green,bg=red,bold]#[default]'
 
@@ -46,8 +39,8 @@ set -g message-fg white
 set -g message-bg red
 
 # window-status-current
-setw -g window-status-current-fg colour4
-setw -g window-status-current-bg colour234
+setw -g window-status-current-fg colour32
+setw -g window-status-current-bg black
 setw -g window-status-current-attr bold
  
 # pane-active-border
@@ -78,6 +71,9 @@ bind C-t last-window
 
 # new window(default)
 bind c new-window
+
+# new session
+bind C-g new-session
 
 # pane to window
 bind b break-pane
@@ -114,8 +110,3 @@ bind -t vi-copy v begin-selection
 bind -t vi-copy y copy-selection
 bind -t vi-copy Y copy-line
 bind / list-keys -t vi-copy
-
-# copy to osx pasteboard
-#set -g default-command "~/.bin/reattach-to-user-namespace -l $SHELL"
-#bind-key C-y run "~/.bin/tmux-pbcopy"
-
