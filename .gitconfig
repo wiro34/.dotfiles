@@ -11,3 +11,5 @@
 	branch = always
 [push]
 	default = upstream
+[core]
+  quotepath = false

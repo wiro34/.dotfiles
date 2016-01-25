@@ -1,0 +1,7 @@
+# load percol scripts
+for f (~/.dotfiles/peco-sources/*) source "${f}"
+
+# binding keys
+bindkey '^R' peco-select-history
+bindkey '^f' peco-cdr
+

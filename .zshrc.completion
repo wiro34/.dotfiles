@@ -1,5 +1,6 @@
 # path
 fpath=(~/.dotfiles/zsh-completions/src $fpath)
+fpath=(/usr/local/share/zsh/site-functions $fpath)
 
 # 補完機能を有効
 autoload -U compinit
