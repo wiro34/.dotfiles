@@ -22,12 +22,6 @@ setopt hist_ignore_dups
 setopt hist_ignore_all_dups
 
 #
-# PATHs
-#
-export PATH=$PATH:/usr/local/sbin
-export PATH=$PATH:~/.bin:~/.dotfiles/.bin
-
-#
 # IMPORTs
 #
 for f (~/.dotfiles/.zshrc.*) source "${f}"

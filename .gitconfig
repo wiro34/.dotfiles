@@ -10,6 +10,6 @@
 	interactive = always
 	branch = always
 [push]
-	default = upstream
+	default = simple
 [core]
   quotepath = false
