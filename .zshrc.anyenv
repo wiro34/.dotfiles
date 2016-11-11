@@ -1,0 +1,24 @@
+export ANYENV_ROOT=/usr/local/anyenv
+export PATH=$ANYENV_ROOT/bin:$PATH
+
+# export RBENV_ROOT=/usr/local/var/rbenv
+# export PATH=$RBENV_ROOT/bin:/usr/local/rbenv/plugins/ruby-build/bin:$PATH
+
+# RBENV_INSTALL_ROOT=$(brew --prefix rbenv)
+
+# case $SHELL in
+# */zsh)
+#   source $RBENV_INSTALL_ROOT/completions/rbenv.zsh
+#   ;;
+# */bash)
+#   source $RBENV_INSTALL_ROOT/completions/rbenv.bash
+#   ;;
+# *)
+#   source $RBENV_INSTALL_ROOT/completions/rbenv.bash
+#   ;;
+# esac
+
+if which anyenv > /dev/null; then
+  eval "$(anyenv init -)"
+fi
+
