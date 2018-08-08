@@ -25,6 +25,10 @@ alias v="vim"
 alias g="git"
 alias gst="git status"
 
+# docker
+alias dc="docker-compose"
+alias ds='docker stack'
+
 # LF
 LF=$(printf '\\\012_')
 LF=${LF%_}

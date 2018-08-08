@@ -11,12 +11,16 @@ LF=${LF%_}
 # PATHs
 #
 export PATH=$PATH:/usr/local/sbin
-export PATH=$PATH:~/.bin:~/.dotfiles/.bin
-export PATH=~/.nodebrew/current/bin:$PATH
+export PATH=$PATH:$HOME/.bin:$HOME/.dotfiles/.bin
+export PATH=$HOME/.anyenv/bin:$PATH
+export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 #
 # EDITOR
 #
 export EDITOR=vim
 export DISPLAY=:1
+
+# ANYENV
+eval "$(anyenv init -)"
 

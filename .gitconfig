@@ -2,6 +2,8 @@
 	st = status
 	ci = commit
 	co = checkout
+  cp = cherry-pick
+	coo = ! git checkout $(git branch --no-color | cut -c 3- | peco)
 [http]
 	sslVerify = false
 [color]

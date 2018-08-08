@@ -1,4 +1,4 @@
-export ANYENV_ROOT=/usr/local/anyenv
+export ANYENV_ROOT=$HOME/.anyenv
 export PATH=$ANYENV_ROOT/bin:$PATH
 
 # export RBENV_ROOT=/usr/local/var/rbenv
