@@ -5,8 +5,13 @@ fi
 
 export SHELL=`which zsh`
 
+# IntelliJ 内のターミナルを判定
+if ps -p $PPID | grep -q IntelliJ; then
+  TERM_PROGRAM=idea
+fi
+
 # Attache tmux
-if [ -z "$TMUX" -a -z "$STY" ]; then
+if [ -z "$TMUX" -a -z "$STY" -a "$TERM_PROGRAM" != "vscode" -a "$TERM_PROGRAM" != "idea" ]; then
   if type tmux >/dev/null 2>&1; then
     if tmux has-session && tmux list-sessions | /usr/bin/grep -qE '.*]$'; then
       exec tmux attach && echo "tmux attached session "
@@ -37,4 +42,4 @@ eval "$(direnv hook zsh)"
 #
 for f (~/.dotfiles/.zshrc.*) source "${f}"
 source ~/.dotfiles/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source ~/.dotfiles/.git-flow-completion.zsh
+

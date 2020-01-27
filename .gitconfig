@@ -4,6 +4,8 @@
 	co = checkout
   cp = cherry-pick
 	coo = ! git checkout $(git branch --no-color | cut -c 3- | peco)
+  pl = ! git pull origin $(git rev-parse --abbrev-ref HEAD)
+  ps = ! git push origin $(git rev-parse --abbrev-ref HEAD)
 [http]
 	sslVerify = false
 [color]
