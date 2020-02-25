@@ -16,11 +16,14 @@ export PATH=$HOME/.anyenv/bin:$PATH
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 #
+# Go
+#
+export GOPATH=$HOME/.go
+export PATH=$GOPATH/bin:$PATH
+
+#
 # EDITOR
 #
 export EDITOR=vim
 export DISPLAY=:1
-
-# ANYENV
-eval "$(anyenv init -)"
 

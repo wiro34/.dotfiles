@@ -29,6 +29,9 @@ alias gst="git status"
 alias dc="docker-compose"
 alias ds='docker stack'
 
+# pbcopy
+alias c='pbcopy'
+
 # LF
 LF=$(printf '\\\012_')
 LF=${LF%_}

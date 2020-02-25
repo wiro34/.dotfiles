@@ -3,9 +3,10 @@
 	ci = commit
 	co = checkout
   cp = cherry-pick
-	coo = ! git checkout $(git branch --no-color | cut -c 3- | peco)
+  coo = ! git checkout $(git branch --no-color | cut -c 3- | peco)
   pl = ! git pull origin $(git rev-parse --abbrev-ref HEAD)
   ps = ! git push origin $(git rev-parse --abbrev-ref HEAD)
+  cor = checkout
 [http]
 	sslVerify = false
 [color]
@@ -17,3 +18,4 @@
 	default = simple
 [core]
   quotepath = false
+  ignorecase = false

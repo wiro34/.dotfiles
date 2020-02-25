@@ -8,3 +8,6 @@ fi
 # User specific environment and startup programs
 export PATH=$PATH:/sbin:/usr/sbin
 
+export GOPATH=$HOME/.go
+export PATH=$GOPATH/bin:$PATH
+
